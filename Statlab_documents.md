@@ -3,15 +3,63 @@ README
 
 # Stat-lab Server
 
-## How to connect to the server
+  - hostname: statlab.math.uic.edu
+  - Fixed IP address 131.193.178.77
 
-## Rstudio Sever
+## How to connect to the Statlab Server
+
+  - Shell command `ssh`: [Secure
+    Shell](https://en.wikipedia.org/wiki/Secure_Shell)
+  - Mac users
+      - Terminal.app
+      - ssh <username@statlab.math.uic.edu>
+          - Follows with your password
+  - Windows users
+      - PuTTY
+      - open source SSH client for
+        windows
+      - <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>
+
+## How to use the R.Studio
+
+  - R
+      - Using Terminal or PuTTY
+      - Just type `R` in a terminal
+  - Rstudio
+      - Web browser e.g. Chrome
+      - <http://statlab.math.uic.edu:8787/>
+  - Some notes about using the Rstudio
+      - save all the documents
+      - save and delete all objects in the Global Enviroment
+        `(rm(list=ls()))`
+      - using top and kill the terminate your R sessions
+      - If your Rsutdio freezes, you could use [`killall -u
+        USERNAME`](https://linux.die.net/man/1/killall). Note that
+        `killall` will only terminate your own processes.
+      - To monitoring your running script and the usage of the server,
+        you could use [`htop`](https://hisham.hm/htop/)
 
 # UIC HPC
 
-## How to connect to the High Performance Computing (HPC)
+  - [Introduction
+    slides](https://acer.uic.edu/wp-content/uploads/sites/421/2020/01/Introduction_to_Extreme.pdf)
+  - [Basic Knowledge](https://confluence.acer.uic.edu/display/KB/)
+      - [Setup SSH
+        key](https://confluence.acer.uic.edu/display/KB/Setting+up+SSH+Keys):
+        After this setup, you do not need to input your password and
+        2-factor code\!
 
 # Github
+
+  - [Github](https://github.com/): For software development version
+    control
+  - Education package for FREE\!
+
+## How to create a github repo
+
+## How to use github to version control your projects
+
+## Demo
 
 ## Education Package
 
