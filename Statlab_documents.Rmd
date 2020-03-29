@@ -1,0 +1,49 @@
+---
+title: "README"
+output:
+  github_document:
+    toc: true
+    toc_depth: 2
+    pandoc_args: --webtex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      comment = "", 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      echo = FALSE, 
+                      fig.height = 5,
+                      fig.width = 8,
+                      tidy = TRUE,
+                      tidy.opts=list(width.cutoff=100))
+options(scipen=1, digits=2, width = 100)
+```
+
+# Stat-lab Server 
+
+## How to connect to the server 
+
+## Rstudio Sever
+
+# UIC HPC
+
+## How to connect to the High Performance Computing (HPC) 
+
+# Github
+
+## Education Package 
+
+## How to use 
+
+### Commenly used git commands
+
+### Rstudio 
+
+### zsh 
+
+# tmux 
+
+# FUSE and sshfs 
+
+# Parallel Computation
