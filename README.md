@@ -1,4 +1,4 @@
-README
+Statlab usage documents
 ================
 
 # Stat-lab Server
@@ -29,17 +29,17 @@ README
       - Web browser e.g. Chrome
       - <http://statlab.math.uic.edu:8787/>
   - Some notes about using the Rstudio
-      - save all the documents
-      - save and delete all objects in the Global Environment
+      - Save all the documents
+      - Save and delete all objects in the Global Environment
         `(rm(list=ls()))`
-      - using top and kill the terminate your R sessions
+      - Use top and kill the terminate your R sessions
       - If your Rsutdio freezes, you could use [`killall -u
         USERNAME`](https://linux.die.net/man/1/killall). Note that
         `killall` will only terminate your own processes.
-      - To monitoring your running script and the usage of the server,
-        you could use [`htop`](https://hisham.hm/htop/)
+      - Mointor your running script and the usage of the server, you
+        could use [`htop`](https://hisham.hm/htop/)
 
-# UIC HPC
+# High Performance Computing (HPC): SABER
 
   - [Introduction
     slides](https://acer.uic.edu/wp-content/uploads/sites/421/2020/01/Introduction_to_Extreme.pdf)
@@ -87,7 +87,7 @@ README
     [copy](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
     your github folder to any server you are using
 
-### zsh
+### zsh and github
 
 # tmux
 
@@ -101,30 +101,39 @@ allowing SSH sessions to remain active without being visible.
 
 ## How to install tmux
 
-There is a detailed instruction for tmux installiation from [this github
+There is a detailed instruction for tmux installation from [this github
 page](https://github.com/tmux/tmux/wiki/Installing). The good news is
-that `tmux` is avaiable in Statlab server and SABER.
+that `tmux` is available in Statlab server and SABER.
 
 ## How to use tmux
 
 1.  There are useful [Getting Started
     documents](https://github.com/tmux/tmux/wiki/Getting-Started) are
-    avaiable on its website
+    available on its website
 
 2.  The prefix key: `Control - b`. Once a tmux client is attached, any
     keys entered are forwarded to the program running in the active pane
     of the current window. For keys that control tmux itself, a special
     key must be pressed first - this is called the prefix key.
 
-3.  Create a new window: `Control - b` + `c`
+3.  Create a new session: `Control - b` + `c`
 
 4.  Detach from a tmux session: `Control - b` + `d`. Note that, after
-    detached from the tmux, you can log out from the server, but the
-    script is still keep running.
+    detached from the tmux, you can log out from the server, but your
+    script is still running.
 
 5.  Attach a previous tmux session: `tmux attach`
 
+More detailed information of shortcuts can be found in this [cheat
+sheet](https://tmuxcheatsheet.com/)
+
 ## Configuration
+
+You can customize the layout of your tmux windows by modifying the file
+`~/.tmux.conf`. There are so many details of how to configure your tmux,
+which is not the focus of this document. But you can find many good
+resources online. For example, the [this
+one](https://coderwall.com/p/ca5cuw/customize-your-tmux).
 
 # FUSE and sshfs
 
