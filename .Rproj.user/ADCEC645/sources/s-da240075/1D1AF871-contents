@@ -46,7 +46,7 @@ options(scipen=1, digits=2, width = 100)
     + http://statlab.math.uic.edu:8787/
 * Some notes about using the Rstudio 
     + save all the documents 
-    + save and delete all objects in the Global Enviroment `(rm(list=ls()))`
+    + save and delete all objects in the Global Environment `(rm(list=ls()))`
     + using top and kill the terminate your R sessions
     + If your Rsutdio freezes, you could use [`killall -u USERNAME`](https://linux.die.net/man/1/killall). Note that `killall` will only terminate your own processes.
     + To monitoring your running script and the usage of the server, you could use [`htop`](https://hisham.hm/htop/)
@@ -59,25 +59,48 @@ options(scipen=1, digits=2, width = 100)
 # Github
 
 - [Github](https://github.com/): For software development version control 
-- Education package for FREE!
-
-## How to create a github repo 
+- [Education pack](https://help.github.com/en/github/teaching-and-learning-with-github-education/about-github-education) and unlimited private repositories for FREE!
 
 ## How to use github to version control your projects
-
-## Demo
-
-## Education Package 
-
-## How to use 
-
-### Commenly used git commands
-
-### Rstudio 
+1. Create a [github account](https://github.com/) and linked with your uic email
+    - Choose the free github account 
+    - Upgrade your account to the [student pack](https://education.github.com/students)
+2. Connect your github account with SSH 
+    - There is a detailed [instruction](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) from the github help documents
+3. Create [an empty repo](https://help.github.com/en/enterprise/2.13/user/articles/creating-a-new-repository) at your github account
+4. Connect your local folder to your github folder:
+    1. Open a terminal and navigate to your local folder, and input following commands:
+    1. `git init`: initiate and create the git documents
+    1. `git add .`: add all the modifications to your folder, note `git add . -u` is for add all the deleting to your folder
+    1. `git commit -m "first commit"`: commit all the changes to the folder 
+    1. `git remote add origin git@github.com:username/your_folder`: link your local folder to your github folder(only run once)
+    1. `git push -u origin master`: update all the changes to your github folder (remote repo)
+5. Now you can [copy](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) your github folder to any server you are using
+    
 
 ### zsh 
 
-# tmux 
+# tmux
+
+[tmux](https://github.com/tmux/tmux/wiki): It allows multiple terminal sessions to be accessed simultaneously in a single window. It is useful for running more than one command-line program at the same time. It can also be used to detach processes from their controlling terminals, allowing SSH sessions to remain active without being visible. 
+
+![](https://www.perl.com/images/an-introduction-to-tmux/tmux-panes.png)
+
+## How to install tmux 
+
+There is a detailed instruction for tmux installiation from [this github page](https://github.com/tmux/tmux/wiki/Installing). The good news is that `tmux` is avaiable in Statlab server and SABER. 
+
+## How to use tmux
+1. There are useful [Getting Started documents](https://github.com/tmux/tmux/wiki/Getting-Started) are avaiable on its website
+
+1. The prefix key: `Control - b`. Once a tmux client is attached, any keys entered are forwarded to the program running in the active pane of the current window. For keys that control tmux itself, a special key must be pressed first - this is called the prefix key.
+1. Create a new window: `Control - b` + `c`
+1. Detach from a tmux session: `Control - b` + `d`. Note that, after detached from the tmux, you can log out from the server, but the script is still keep running.
+1. Attach a previous tmux session: `tmux attach`
+
+## Configuration
+
+
 
 # FUSE and sshfs 
 

@@ -1,5 +1,6 @@
 {
-    "cursorPosition" : "62,0",
-    "scrollLine" : "51",
+    "cursorPosition" : "88,0",
+    "ignored_words" : "zsh,tmux,sshfs,hostname,statlab,uic,edu,Statlab,PuTTY,http,www,chiark,greenend,uk,sgtatham,Rstudio,Rsutdio,https,acer,Github,github\n",
+    "scrollLine" : "87",
     "tempName" : "Untitled1"
 }
