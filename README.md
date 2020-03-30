@@ -157,7 +157,7 @@ upload and download files to the server just as you did locally.
 
 1.  Downlaod and install the `OSXFUSE-{version}.dmg` file from [this
     website](https://osxfuse.github.io/)
-2.  Download and install the `SSHFS-{version.pkg}` file from [this
+2.  Download and install the `SSHFS-{version}.pkg` file from [this
     website](https://osxfuse.github.io/)
 3.  Some help documents of
     [FUSE](https://github.com/osxfuse/osxfuse/wiki/FAQ) and
@@ -166,11 +166,13 @@ upload and download files to the server just as you did locally.
 ### How to use SSHFS
 
 After successfully install the FUSE and SSHFS, you are able to connect
-the your Mac file system with a server by the following steps: 1. Create
-an empty folder in your Mac which will be used to connect the server.
-Here, we just name it `mount-point` 1. To connect the server run the
-following command: `sshfs username@server:/path-on-server/
-~/path-to-mount-point` 1. If everyting is ok, you can find your server
-folder in your Mac’s file system
-[](%22https://github.com/wal615/Stat-lab-documents/blob/master/SSHFS.png%22)
-\# Parallel Computation
+the your Mac file system with a server by the following steps:
+
+1.  Create an empty folder in your Mac which will be used to connect the
+    server. Here, we just name it `mount-point`
+2.  To connect the server run the following command: `sshfs
+    username@server:/path-on-server/ ~/path-to-mount-point`
+3.  If everyting is ok, you can find your server folder in your Mac’s
+    file system ![](./SSHFS.png)
+
+# Parallel Computation
