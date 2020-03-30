@@ -18,6 +18,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       tidy = TRUE,
                       tidy.opts=list(width.cutoff=100))
 options(scipen=1, digits=2, width = 100)
+
 ```
 
 # Stat-lab Server 
@@ -102,6 +103,25 @@ More detailed information of shortcuts can be found in this [cheat sheet](https:
 ## Configuration
 You can customize the layout of your tmux windows by modifying the file `~/.tmux.conf`. There are so many details of how to configure your tmux, which is not the focus of this document. But you can find many good resources online. For example, the [this one](https://coderwall.com/p/ca5cuw/customize-your-tmux). 
 
-# FUSE and sshfs 
+# Upload/Downlaod from a server
 
+1. Terminal: [`scp`](https://osxdaily.com/2016/11/07/download-file-from-server-scp-ssh/)
+1. Solftwares: [Fetch](https://webstore.illinois.edu/shop/product.aspx?zpid=1244) (Free for UIC students, but only for Mac users). [Filezilla](https://filezilla-project.org/download.php?platform=win64) for windows.
+1. FUSE and sshfs for Mac users
+
+## FUSE (for Mac user only and it requires MacOS > 10.5)
+
+[FUSE](https://osxfuse.github.io/) allows you to extend macOS's native file handling capabilities via third-party file systems. Basically, you can connect your own Mac with your server's folder so that you can upload and download files to the server just as you did locally. 
+
+### How to install FUSE and SSHFS
+1. Downlaod and install the `OSXFUSE-{version}.dmg` file from [this website](https://osxfuse.github.io/)
+2. Download and install the `SSHFS-{version.pkg}` file from [this website](https://osxfuse.github.io/)
+3. Some help documents of [FUSE](https://github.com/osxfuse/osxfuse/wiki/FAQ) and [SSHFS](https://github.com/osxfuse/osxfuse/wiki/SSHFS)
+
+### How to use SSHFS
+After successfully install the FUSE and SSHFS, you are able to connect the your Mac file system with a server by the following steps:
+1. Create an empty folder in your Mac which will be used to connect the server. Here, we just name it `mount-point`
+1. To connect the server run the following command: `sshfs username@server:/path-on-server/ ~/path-to-mount-point`
+1. If everyting is ok, you can find your server folder in your Mac's file system
+![]("SSHFS.png")
 # Parallel Computation
