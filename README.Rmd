@@ -18,6 +18,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       tidy = TRUE,
                       tidy.opts=list(width.cutoff=100))
 options(scipen=1, digits=2, width = 100)
+
 ```
 
 # Stat-lab Server 
@@ -122,5 +123,5 @@ After successfully install the FUSE and SSHFS, you are able to connect the your 
 1. Create an empty folder in your Mac which will be used to connect the server. Here, we just name it `mount-point`
 1. To connect the server run the following command: `sshfs username@server:/path-on-server/ ~/path-to-mount-point`
 1. If everyting is ok, you can find your server folder in your Mac's file system
-![]("SSHFS.png")
+[]("https://github.com/wal615/Stat-lab-documents/blob/master/SSHFS.png")
 # Parallel Computation
