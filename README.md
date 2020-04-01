@@ -1,7 +1,7 @@
-Statlab usage documents
+A short introduction of how to connect and use a computing server
 ================
 
-# Stat-lab Server
+# Statlab Server
 
   - hostname: statlab.math.uic.edu
   - Fixed IP address 131.193.178.77
@@ -36,7 +36,7 @@ Statlab usage documents
       - If your Rsutdio freezes, you could use [`killall -u
         USERNAME`](https://linux.die.net/man/1/killall). Note that
         `killall` will only terminate your own processes.
-      - Mointor your running script and the usage of the server, you
+      - Monitor your running script and the usage of the server, you
         could use [`htop`](https://hisham.hm/htop/)
 
 # High Performance Computing (HPC): SABER
@@ -48,19 +48,25 @@ Statlab usage documents
         key](https://confluence.acer.uic.edu/display/KB/Setting+up+SSH+Keys):
         After this setup, you do not need to input your password and
         2-factor code\!
+  - Parallel computation:
+    1.  Foreach using [a future
+        backend](https://blog.revolutionanalytics.com/2019/01/future-package.html)
+    2.  Rmpi:
+        [here](https://www.glennklockwood.com/data-intensive/r/on-hpc.html)
+        are some tutorials and [a demo
+        code](https://github.com/glennklockwood/paraR/tree/master/hello)
 
 # Github
 
   - [Github](https://github.com/): For software development version
     control
-  - [Education
-    pack](https://help.github.com/en/github/teaching-and-learning-with-github-education/about-github-education)
-    and unlimited private repositories for FREE\!
+  - [Education pack](https://education.github.com/pack) and unlimited
+    private repositories for FREE\!
 
-## How to use github to version control your projects
+## How to use github to manage your projects
 
 1.  Create a [github account](https://github.com/) and linked with your
-    uic email
+    uic.edu email
       - Choose the free github account
       - Upgrade your account to the [student
         pack](https://education.github.com/students)
@@ -68,6 +74,8 @@ Statlab usage documents
       - There is a detailed
         [instruction](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
         from the github help documents
+      - You may need setup SSH connection to github for both Statlab and
+        SABER
 3.  Create [an empty
     repo](https://help.github.com/en/enterprise/2.13/user/articles/creating-a-new-repository)
     at your github account
@@ -87,9 +95,7 @@ Statlab usage documents
     [copy](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
     your github folder to any server you are using
 
-### zsh and github
-
-# tmux
+# Tmux
 
 [tmux](https://github.com/tmux/tmux/wiki): It allows multiple terminal
 sessions to be accessed simultaneously in a single window. It is useful
@@ -107,25 +113,20 @@ that `tmux` is available in Statlab server and SABER.
 
 ## How to use tmux
 
-1.  There are useful [Getting Started
-    documents](https://github.com/tmux/tmux/wiki/Getting-Started) are
-    available on its website
-
+1.  Open terminal and type `tmux`
 2.  The prefix key: `Control - b`. Once a tmux client is attached, any
     keys entered are forwarded to the program running in the active pane
     of the current window. For keys that control tmux itself, a special
     key must be pressed first - this is called the prefix key.
-
 3.  Create a new session: `Control - b` + `c`
-
 4.  Detach from a tmux session: `Control - b` + `d`. Note that, after
     detached from the tmux, you can log out from the server, but your
     script is still running.
-
 5.  Attach a previous tmux session: `tmux attach`
 
 More detailed information of shortcuts can be found in this [cheat
-sheet](https://tmuxcheatsheet.com/)
+sheet](https://tmuxcheatsheet.com/) and [Getting Started
+documents](https://github.com/tmux/tmux/wiki/Getting-Started)
 
 ## Configuration
 
@@ -135,11 +136,11 @@ which is not the focus of this document. But you can find many good
 resources online. For example, the [this
 one](https://coderwall.com/p/ca5cuw/customize-your-tmux).
 
-# Upload/Downlaod from a server
+# Upload/Download from a server
 
 1.  Terminal:
     [`scp`](https://osxdaily.com/2016/11/07/download-file-from-server-scp-ssh/)
-2.  Solftwares:
+2.  Software:
     [Fetch](https://webstore.illinois.edu/shop/product.aspx?zpid=1244)
     (Free for UIC students, but only for Mac users).
     [Filezilla](https://filezilla-project.org/download.php?platform=win64)
@@ -155,7 +156,7 @@ upload and download files to the server just as you did locally.
 
 ### How to install FUSE and SSHFS
 
-1.  Downlaod and install the `OSXFUSE-{version}.dmg` file from [this
+1.  Download and install the `OSXFUSE-{version}.dmg` file from [this
     website](https://osxfuse.github.io/)
 2.  Download and install the `SSHFS-{version}.pkg` file from [this
     website](https://osxfuse.github.io/)
@@ -172,7 +173,5 @@ the your Mac file system with a server by the following steps:
     server. Here, we just name it `mount-point`
 2.  To connect the server run the following command: `sshfs
     username@server:/path-on-server/ ~/path-to-mount-point`
-3.  If everyting is ok, you can find your server folder in your Mac’s
+3.  If everything is OK, you can find your server folder in your Mac’s
     file system ![](./SSHFS.png)
-
-# Parallel Computation
