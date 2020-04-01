@@ -55,9 +55,17 @@ options(scipen=1, digits=2, width = 100)
 - [Introduction slides](https://acer.uic.edu/wp-content/uploads/sites/421/2020/01/Introduction_to_Extreme.pdf)
 - [Basic Knowledge](https://confluence.acer.uic.edu/display/KB/)  
     - [Setup SSH key](https://confluence.acer.uic.edu/display/KB/Setting+up+SSH+Keys): After this setup, you do not need to input your password and 2-factor code!
-- Parallel computation: 
-    1. Foreach using [a future backend](https://blog.revolutionanalytics.com/2019/01/future-package.html)
-    2. Rmpi: [here](https://www.glennklockwood.com/data-intensive/r/on-hpc.html) are some tutorials and [a demo code](https://github.com/glennklockwood/paraR/tree/master/hello)
+
+# Parallel computation: 
+
+## On Statlab server 
+There are many packages available for parallel computation on a single computer. There is [a short introduction of foreach](./Introduction_foreach.pdf). 
+
+## On SABER
+In order to use the multiple cores provide by a cluster of computer, the procedure is more complicated than the signal computer. Unfortunately, I did not totally figure it out but I find some resources which may be helpful.
+
+1. Foreach using [a future backend](https://blog.revolutionanalytics.com/2019/01/future-package.html)
+2. Rmpi: [here](https://www.glennklockwood.com/data-intensive/r/on-hpc.html) are some tutorials and [a demo code](https://github.com/glennklockwood/paraR/tree/master/hello)
 
 # Github
 
@@ -75,6 +83,7 @@ options(scipen=1, digits=2, width = 100)
 4. Connect your local folder to your github folder:
     1. Open a terminal and navigate to your local folder, and input following commands:
     1. `git init`: initiate and create the git documents
+    1. `git status`: check the changes of documents since last push 
     1. `git add .`: add all the modifications to your folder, note `git add . -u` is for add all the deleting to your folder
     1. `git commit -m "first commit"`: commit all the changes to the folder 
     1. `git remote add origin git@github.com:username/your_folder`: link your local folder to your github folder(only run once)
@@ -96,6 +105,7 @@ There is a detailed instruction for tmux installation from [this github page](ht
 
 1. Open terminal and type `tmux`
 1. The prefix key: `Control - b`. Once a tmux client is attached, any keys entered are forwarded to the program running in the active pane of the current window. For keys that control tmux itself, a special key must be pressed first - this is called the prefix key.
+1. Split pane vertically: `Control - b` + `%`
 1. Create a new session: `Control - b` + `c`
 1. Detach from a tmux session: `Control - b` + `d`. Note that, after detached from the tmux, you can log out from the server, but your script is still running.
 1. Attach a previous tmux session: `tmux attach`

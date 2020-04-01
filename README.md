@@ -48,13 +48,28 @@ A short introduction of how to connect and use a computing server
         key](https://confluence.acer.uic.edu/display/KB/Setting+up+SSH+Keys):
         After this setup, you do not need to input your password and
         2-factor code\!
-  - Parallel computation:
-    1.  Foreach using [a future
-        backend](https://blog.revolutionanalytics.com/2019/01/future-package.html)
-    2.  Rmpi:
-        [here](https://www.glennklockwood.com/data-intensive/r/on-hpc.html)
-        are some tutorials and [a demo
-        code](https://github.com/glennklockwood/paraR/tree/master/hello)
+
+# Parallel computation:
+
+## On Statlab server
+
+There are many packages available for parallel computation on a single
+computer. There is [a short introduction of
+foreach](./Introduction_foreach.pdf).
+
+## On SABER
+
+In order to use the multiple cores provide by a cluster of computer, the
+procedure is more complicated than the signal computer. Unfortunately, I
+did not totally figure it out but I find some resources which may be
+helpful.
+
+1.  Foreach using [a future
+    backend](https://blog.revolutionanalytics.com/2019/01/future-package.html)
+2.  Rmpi:
+    [here](https://www.glennklockwood.com/data-intensive/r/on-hpc.html)
+    are some tutorials and [a demo
+    code](https://github.com/glennklockwood/paraR/tree/master/hello)
 
 # Github
 
@@ -83,13 +98,14 @@ A short introduction of how to connect and use a computing server
     1.  Open a terminal and navigate to your local folder, and input
         following commands:
     2.  `git init`: initiate and create the git documents
-    3.  `git add .`: add all the modifications to your folder, note `git
+    3.  `git status`: check the changes of documents since last push
+    4.  `git add .`: add all the modifications to your folder, note `git
         add . -u` is for add all the deleting to your folder
-    4.  `git commit -m "first commit"`: commit all the changes to the
+    5.  `git commit -m "first commit"`: commit all the changes to the
         folder
-    5.  `git remote add origin git@github.com:username/your_folder`:
+    6.  `git remote add origin git@github.com:username/your_folder`:
         link your local folder to your github folder(only run once)
-    6.  `git push -u origin master`: update all the changes to your
+    7.  `git push -u origin master`: update all the changes to your
         github folder (remote repo)
 5.  Now you can
     [copy](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -118,11 +134,12 @@ that `tmux` is available in Statlab server and SABER.
     keys entered are forwarded to the program running in the active pane
     of the current window. For keys that control tmux itself, a special
     key must be pressed first - this is called the prefix key.
-3.  Create a new session: `Control - b` + `c`
-4.  Detach from a tmux session: `Control - b` + `d`. Note that, after
+3.  Split pane vertically: `Control - b` + `%`
+4.  Create a new session: `Control - b` + `c`
+5.  Detach from a tmux session: `Control - b` + `d`. Note that, after
     detached from the tmux, you can log out from the server, but your
     script is still running.
-5.  Attach a previous tmux session: `tmux attach`
+6.  Attach a previous tmux session: `tmux attach`
 
 More detailed information of shortcuts can be found in this [cheat
 sheet](https://tmuxcheatsheet.com/) and [Getting Started
