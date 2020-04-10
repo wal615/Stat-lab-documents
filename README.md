@@ -37,10 +37,15 @@ A short introduction of how to connect and use a computing server
         USERNAME`](https://linux.die.net/man/1/killall). Note that
         `killall` will only terminate your own processes.
       - Monitor your running script and the usage of the server, you
-        could use [`htop`](https://hisham.hm/htop/)
+        could type [`htop`](https://hisham.hm/htop/) in a terminal
+      - Monitor how much memory (RAM) you are using, you could type `ps
+        -U username --no-headers -o rss | awk '{ sum+=$1} END {print
+        int(sum/1024/1024) "GB"}'`
 
 # High Performance Computing (HPC): SABER
 
+  - To check those documents, you need to be in campus or connect to
+    UIC’s VPN
   - [Introduction
     slides](https://acer.uic.edu/wp-content/uploads/sites/421/2020/01/Introduction_to_Extreme.pdf)
   - [Basic Knowledge](https://confluence.acer.uic.edu/display/KB/)
